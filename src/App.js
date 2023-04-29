@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
-import Todolist from './component/Todolist';
+import TodoList from './component/TodoList/TodoList';
 
 function App() {
   return (
-    <>
+    <div>
       {/* 컴포넌트 정ㅣ */}
       {/* 전체 리트 보여주기 */}
       {/* 리스트 삭제 
@@ -14,8 +13,8 @@ function App() {
 다크, 라이트 모드
 로컬스토리지 */}
 
-      <Todolist />
-    </>
+      <TodoList />
+    </div>
   );
 }
 

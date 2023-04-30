@@ -22,15 +22,13 @@ const TodoList = () => {
       <ul>
         {todos.map((item) => (
           // li component 단위로 수정하기
-          <li key={item.id}>
-            <input
-              type='checkbox'
-              checked={item.done === true}
-              onChange={handleUpdate}
-            />
-            <label>{item.text}</label>
-            <button onClick={() => handleDelete(item)}>삭제하기</button>
-          </li>
+
+          <TodoItem
+            key={item.id}
+            todo={item}
+            onUpdate={handleUpdate}
+            onDelete={handleDelete}
+          />
         ))}
       </ul>
       <TodoInsert onAdd={handleAdd} />

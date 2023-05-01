@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import styles from './TodoInsert.module.css';
 
 const TodoInsert = ({ onAdd }) => {
   // input에 입력된 '상태'
@@ -15,15 +16,19 @@ const TodoInsert = ({ onAdd }) => {
     setText('');
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      className={styles.form}
+      onSubmit={handleSubmit}
+    >
       <input
         type='text'
+        className={styles.input}
         placeholder='Add Todo'
         title='Add Todo'
         value={text}
         onChange={handleChange}
       />
-      <button>Add</button>
+      <button className={styles.button}>Add</button>
     </form>
   );
 };
